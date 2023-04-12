@@ -39,7 +39,7 @@ public class SpellCast : MonoBehaviour
             if (distance <= distanceThreshold)
             {
                 // Fireball has hit the target, do damage, etc.
-                DestroyImmediate(fireballPrefab, true);
+                //DestroyImmediate(fireballPrefab, true);
             }
         }
     }

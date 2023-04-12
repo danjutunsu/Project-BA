@@ -195,7 +195,8 @@ public class NPCInteractionController : MonoBehaviour
                 PlayerAnimator.Play("PunchLeft");
             }
 
-            npcStats.LoseMana(randomDmg / 2);
+            var randomDrain= UnityEngine.Random.Range(10, 200);
+            npcStats.LoseMana(randomDrain / 2);
             animator.SetBool("DisplayText", true);
 
             npcDamageTaken.SetText($"-{randomDmg}");

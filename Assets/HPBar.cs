@@ -22,37 +22,18 @@ public class HPBar : MonoBehaviour
     {
         if (TargetStats.selectedNPC != null)
         {
+            //Debug.Log("Current Health: " + currentHealth);
+            //Debug.Log("Current Mana: " + currentMana);
             NPCStats selectedStats = TargetStats.selectedNPC.GetComponentInChildren<NPCStats>();
             currentHealth = selectedStats.currentHealth;
             maxHealth = selectedStats.maxHealth;
 
-            Debug.Log("Current Health: " + currentHealth);
-            UpdateHealthBar(currentHealth, maxHealth);
-
             currentMana = selectedStats.currentMana;
             maxMana = selectedStats.maxMana;
-            Debug.Log("Current Mana: " + currentMana);
+            float healthPercent = (float)currentHealth / maxHealth;
             float manaPercent = (float)currentMana / maxMana;
             manaBarTransform.localScale = new Vector3(manaPercent, 1, 1);
+            healthBarTransform.localScale = new Vector3(healthPercent, 1, 1);
         }
     }
-
-    void UpdateHealthBar(float currentHealth, float maxHealth)
-    {
-        float healthPercentage = currentHealth / maxHealth;
-        float newWidth = maxWidth * healthPercentage;
-
-        // Set the new width of the health bar
-        Vector2 size = healthBarTransform.sizeDelta;
-        size.x = newWidth;
-        healthBarTransform.sizeDelta = size;
-
-        // Calculate the new aspect ratio of the health bar
-        float aspectRatio = size.y / size.x;
-
-        // Set the new height of the health bar to preserve the aspect ratio
-        size.y = size.x * aspectRatio;
-        healthBarTransform.sizeDelta = size;
-    }
-
 }

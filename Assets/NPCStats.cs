@@ -20,7 +20,6 @@ public class NPCStats : MonoBehaviour
     public Vector3 startingPosition;
     public Chest chest;
 
-
     void Awake()
     {
         startingPosition = transform.position;

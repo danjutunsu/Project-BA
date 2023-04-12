@@ -100,7 +100,6 @@
     <Compile Include="Assets\npcClick.cs" />
     <Compile Include="Assets\ReadStats.cs" />
     <Compile Include="Assets\AssignedMana.cs" />
-    <Compile Include="Assets\Exp.cs" />
     <Compile Include="Assets\ToggleTarget.cs" />
     <Compile Include="Assets\Chest.cs" />
     <Compile Include="Assets\ScrollView.cs" />
@@ -135,7 +134,6 @@
     <Compile Include="Assets\CircleTerrainListener.cs" />
     <Compile Include="Assets\NPCInteractionController.cs" />
     <Compile Include="Assets\TakeItem.cs" />
-    <Compile Include="Assets\Health.cs" />
     <Compile Include="Assets\NPCMovement.cs" />
     <Compile Include="Assets\FamilyRing.cs" />
     <Compile Include="Assets\Animation_NPC_Dmg.cs" />

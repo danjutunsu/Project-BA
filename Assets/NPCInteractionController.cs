@@ -71,13 +71,13 @@ public class NPCInteractionController : MonoBehaviour
                 Canvas NPCCanvas = targetStats.selectedNPC.transform.Find("NPCCanvas").GetComponent<Canvas>();
                 TextMeshProUGUI NPCName = NPCCanvas.transform.Find("NPCName").GetComponent<TextMeshProUGUI>();
                 targetStats.Name.text = NPCName.text;
-                Debug.Log("Clicked Name: " + NPCName.text);
+                //Debug.Log("Clicked Name: " + NPCName.text);
 
                 TargetPanel.SetActive(true);
             }
             else if (TargetPanel.activeSelf && targetStats.selectedNPC != hit.collider.gameObject && hit.collider.gameObject.tag == "NPC")
             {
-                Debug.Log("ASSIGNING");
+                //Debug.Log("ASSIGNING");
                 Debug.Log(hit.collider.gameObject.tag);
                 targetStats.selectedNPC = hit.collider.gameObject;
                 Canvas NPCCanvas = targetStats.selectedNPC.transform.Find("NPCCanvas").GetComponent<Canvas>();
@@ -86,7 +86,7 @@ public class NPCInteractionController : MonoBehaviour
             }
             else if (TargetPanel.activeSelf && hit.collider.gameObject.tag != "NPC")
             { 
-                Debug.Log("CLEAR");
+                //Debug.Log("CLEAR");
                 targetStats.selectedNPC = null;
                 targetStats.Name.text = null;
 
@@ -104,15 +104,29 @@ public class NPCInteractionController : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit, Mathf.Infinity, layerMask) && hit.collider.CompareTag("NPC") && hit.collider.gameObject != gameObject)
         {
+            if (!TargetPanel.activeSelf)
+            {
+                TargetPanel.SetActive(true);
+            }
+                //Debug.Log("Deselect NPC if NPC is current Enemy so you can easily stop attacks");
             if (Enemy != null && hit.collider.gameObject == Enemy && npcStats.currentHealth > 0)
             {
-                //Debug.Log("Deselecting");
+                targetStats.selectedNPC = hit.collider.gameObject;
+                Canvas NPCCanvas = targetStats.selectedNPC.transform.Find("NPCCanvas").GetComponent<Canvas>();
+                TextMeshProUGUI NPCName = NPCCanvas.transform.Find("NPCName").GetComponent<TextMeshProUGUI>();
+                targetStats.Name.text = NPCName.text;
+                
                 Enemy = null;
-
                 combatRunning = false;
             }
             else
             {
+                TargetPanel.SetActive(true);
+                targetStats.selectedNPC = hit.collider.gameObject;
+                Canvas NPCCanvas = targetStats.selectedNPC.transform.Find("NPCCanvas").GetComponent<Canvas>();
+                TextMeshProUGUI NPCName = NPCCanvas.transform.Find("NPCName").GetComponent<TextMeshProUGUI>();
+                targetStats.Name.text = NPCName.text;
+
                 //Debug.Log("Clicked on " + hit.collider.gameObject.name);
                 Enemy = hit.collider.gameObject;
 
@@ -174,15 +188,13 @@ public class NPCInteractionController : MonoBehaviour
         float currentNPCHealth = npcStats.currentHealth;
         while (combatRunning && currentNPCHealth > 0)
         {
-            Debug.Log("ATTACKING");
-
+            //Debug.Log("ATTACKING");
             var randomDmg = UnityEngine.Random.Range(10, 20000);
             npcStats.LoseHP(randomDmg);
             if (npcStats.currentHealth <= 0)
             {
-                Debug.Log("NPC dies. deselecting");
+                //Debug.Log("NPC dies. deselecting");
                 Enemy = null;
-
                 combatRunning = false;
             }
             var randomMelee = UnityEngine.Random.Range(1, 100);

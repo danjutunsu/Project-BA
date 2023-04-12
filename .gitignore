@@ -361,3 +361,83 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/Assets/3D Haven/Free Fantasy Terrain Textures
+/Assets/ADG_Textures
+/Assets/AnimeGirlIdleAnimations_free
+/Assets/Fantasy Tavern Music Pack/ChrisGruchacz_Fantasy_Tavern_Music_Pack
+/Assets/Fantasy House
+/Assets/Environment
+/Assets/Earth_Mage
+/Assets/CodeMonkey/HealthSystem
+/Assets/Cobble textures pack
+/Assets/Character
+/Assets/CaptainCatSparrow/ArmorAndJewelry
+/Assets/Blink/Art
+/Assets/Basic_RPG_Icons
+/Assets/_TerrainAutoUpgrade
+/Assets/ZombieAnimationPackFree
+/Assets/Unity.VisualScripting.Generated/VisualScripting.Flow
+/Assets/TutorialInfo
+/Assets/The fantasy music collection STARTER
+/Assets/TextMesh Pro
+/Assets/Street_props
+/Assets/Skybox
+/Assets/SiuniaevCharacters/02_Golem
+/Assets/Scripts
+/Assets/Scenes
+/Assets/Samples/Input System/1.5.0
+/Assets/Resources
+/Assets/Prefabs
+/Assets/Nature - Essentials
+/Assets/Mobile
+/Assets/KY_effects
+/Assets/Kevin Iglesias/Melee Warrior Animations
+/Assets/JulienNoelAssets/Medfan_BarrelsAndBoxes
+/Assets/InputSystem
+/Assets/GrassFlowers
+/Assets/FourEvilDragonsPBR
+/Assets/Bella_yell.mp3
+/Assets/Bella_WelcomeBack.mp3
+/Assets/Bella_thank_you_20%_100%.mp3
+/Assets/Bella_ThanksForAccepting.mp3
+/Assets/Bella_thanks.mp3
+/Assets/Bella_reward.mp3
+/Assets/Bella_Request.mp3
+/Assets/Bella_greetings_20%_100%.mp3
+/Assets/BellaReluctantGoodbye.mp3
+/Assets/BellaItMightBe.mp3
+/Assets/BellaImSorry.mp3
+/Assets/AttackShader.shadergraph
+/Assets/AttackRing.shader
+/Assets/Circle.mat
+/Assets/earth_mage_controller.controller
+/Assets/New Material.mat
+/Assets/New Material 2.mat
+/Assets/New Material 1.mat
+/Assets/mainSettings.lighting
+/Assets/license.txt
+/Assets/NewSurfaceShader.shader
+/Assets/NewLayer.terrainlayer
+/Assets/NewLayer 3.terrainlayer
+/Assets/NewLayer 2.terrainlayer
+/Assets/NewLayer 1.terrainlayer
+/Assets/NewBrush.brush
+/Assets/NewBrush 1.brush
+/Assets/New Terrain.asset
+/Assets/New Terrain 1.asset
+/Assets/New Render Texture.renderTexture
+/Assets/New Render Texture 1.renderTexture
+/Assets/main.unity
+/Assets/Player_UI.controller
+/Assets/Outline.shadergraph
+/Assets/README.txt
+/Assets/Readme.asset
+/Assets/UniversalRenderPipelineGlobalSettings.asset
+/Assets/UniversalRenderPipelineAsset_Renderer.asset
+/Assets/UniversalRenderPipelineAsset.asset
+/Assets/TerrainShader.shader
+/Library
+/Temp
+/CodeMonkey_HealthSystem_Editor.csproj
+/CodeMonkey_HealthSystem.csproj
+/UserSettings

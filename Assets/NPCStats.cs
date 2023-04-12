@@ -67,7 +67,8 @@ public class NPCStats : MonoBehaviour
         animator.SetFloat("speed", 0f);
 
         npcObject.transform.position = startingPosition;
-        //chest.ResetChest();
+        lootable = false;
+        chest.ResetChest();
     }
 
     public void Update()

@@ -6,6 +6,8 @@ public class Dead : MonoBehaviour
 {
     public GameObject Body;
     public NPCStats NPCStats;
+    public bool hasDecomposeBeenCalled = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -15,10 +17,11 @@ public class Dead : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (NPCStats.currentHealth <= 0) 
+        if (!hasDecomposeBeenCalled && NPCStats.currentHealth <= 0) 
         {
             //Debug.Log("NPC Died");
             Decomposing();
+            hasDecomposeBeenCalled = true;
         }
     }
 
@@ -38,7 +41,9 @@ public class Dead : MonoBehaviour
 
     void Reappear()
     {
+        Debug.Log("HI");
         Body.SetActive(true);
         NPCStats.Revive();
+        hasDecomposeBeenCalled = false;
     }
 }
